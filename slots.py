@@ -113,7 +113,7 @@ class Game(BaseGame):
     def handler_bonus(self):
         new_symbol_chance = self.get_next_random()
         if new_symbol_chance < 50:  # 50% chance to get a new bonus symbol
-            new_value = self.get_next_random() % 10 + 70
+            new_value = self.get_next_random() % 10 + 1
             self.cur['bonus_simbols'].append(new_value)
             self.cur['raunds_left'] = self.ctx['bonus']['raunds_left']
         else:
